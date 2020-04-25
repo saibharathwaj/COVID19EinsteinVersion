@@ -1,0 +1,130 @@
+.Level .is-cherry h4, .Level .is-cherry h5 {
+    color: rgba(255,7,58,.6);
+}
+.Level .level-item>* {
+    align-self: center;
+}
+.Level h1, .Level h5 {
+    margin-bottom: 0;
+}
+h5 {
+    font-size: 12px!important;
+}
+h4, h5 {
+    font-family: "archia";
+    font-weight: 900;
+    text-transform: uppercase;
+}
+user agent stylesheet
+h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-duration: .45s;
+    animation-duration: .45s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.Level {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    width: 30rem;
+}
+
+.MapExplorer .map-stats {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 5rem;
+    position: relative;
+}.MapExplorer .map-stats .stats:first-child {
+    margin-left: 0;
+}
+.MapExplorer .map-stats .stats {
+    background: rgba(255,7,58,.12549);
+    color: #ff073a;
+    padding: .5rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-left: .25rem;
+    margin-right: .25rem;
+    margin-bottom: .5rem;
+    width: 100%;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.MapExplorer .map-stats .stats.is-blue {
+    background: rgba(0,123,255,.0627451);
+}
+.MapExplorer .map-stats .stats.is-green {
+    background: rgba(40,167,69,.12549);
+}
+.MapExplorer .map-stats .stats:last-child {
+    margin-right: 0;
+}
+.MapExplorer .map-stats .stats.is-gray {
+    background: rgba(108,117,125,.0627451);
+}
+h1 {
+    font-family: "archia";
+    font-size: 24px!important;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+h6 {
+    font-family: "archia";
+    font-size: 11px!important;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+h5 {
+    font-size: 12px!important;
+}
+h4, h5 {
+    font-family: "archia";
+    font-weight: 900;
+    text-transform: uppercase;
+}
+MapExplorer .map-stats .stats .stats-bottom {
+    display: flex;
+    flex-direction: row;
+}
+.MapExplorer .map-stats h1, .MapExplorer .map-stats h3, .MapExplorer .map-stats h5, .MapExplorer .map-stats h6 {
+    margin: 0;
+}
+.MapExplorer .map-stats .stats.is-blue h5, .MapExplorer .map-stats .stats.is-blue h6 {
+    color: rgba(0,123,255,.6);
+}
+.MapExplorer .map-stats h1, .MapExplorer .map-stats h3, .MapExplorer .map-stats h5, .MapExplorer .map-stats h6 {
+    margin: 0;
+}
+.MapExplorer .map-stats .stats.is-green h5, .MapExplorer .map-stats .stats.is-green h6 {
+    color: rgba(40,167,69,.6);
+}
+.MapExplorer .map-stats h1, .MapExplorer .map-stats h3, .MapExplorer .map-stats h5, .MapExplorer .map-stats h6 {
+    margin: 0;
+}
+.MapExplorer .map-stats .stats.is-gray h5, .MapExplorer .map-stats .stats.is-gray h6 {
+    color: rgba(108,117,125,.6);
+}
+.MapExplorer .map-stats h1, .MapExplorer .map-stats h3, .MapExplorer .map-stats h5, .MapExplorer .map-stats h6 {
+    margin: 0;
+}
+.divcenter {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+  }

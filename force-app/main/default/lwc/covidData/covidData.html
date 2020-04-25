@@ -1,0 +1,104 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="11" padding="around-small">
+            <div class="divcenter">
+                COVID India Stats Live Counts
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-card title="COVID Cases in India (Live)" icon-name="custom:custom63">
+        <lightning-tabset>
+            <lightning-tab label="State Wise Corona Data">
+                <div class="slds-m-around__small">
+                    <template if:true={nationalData}>
+                        <h2 class="slds-float_right"></h2>
+                        <lightning-layout multiple-rows>
+                            <lightning-layout-item size="8" padding="around_small">
+                                <div class="MapExplorer fadeInUp">
+                                    <div class="map-stats">
+                                        <div class="stats">
+                                            <h5>Confirmed</h5>
+                                            <div class="stats-bottom">
+                                                <h1>{nationalTotal.confirmed}</h1>
+                                                <h6></h6>
+                                            </div>
+                                        </div>
+                                        <div class="stats is-blue">
+                                            <h5>Active</h5>
+                                            <div class="stats-bottom">
+                                                <h1>{nationalTotal.active}</h1>
+                                                <h6></h6>
+                                            </div>
+                                        </div>
+                                        <div class="stats is-green">
+                                            <h5>Recovered</h5>
+                                            <div class="stats-bottom">
+                                                <h1>{nationalTotal.recovered}</h1>
+                                                <h6></h6>
+                                            </div>
+                                        </div>
+                                        <div class="stats is-gray">
+                                            <h5>Deceased</h5>
+                                            <div class="stats-bottom">
+                                                <h1>{nationalTotal.deaths}</h1>
+                                                <h6></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="height: 500px;">
+                                    <template if:true={nationalData}>
+                                    <lightning-datatable
+                                            key-field="state"
+                                            data={nationalData}
+                                            show-row-number-column
+                                            columns={columns}>
+                                    </lightning-datatable>
+                                    </template>
+                                </div>
+                               </lightning-layout-item>
+                        </lightning-layout>
+                    </template>
+                </div>
+            </lightning-tab>
+            <lightning-tab label="District Wise Corona Data">
+                <div class="slds-m-around__small">
+                    <template if:true={nationalData}>
+                         <lightning-layout multiple-rows>
+                            <lightning-layout-item size="4" padding="around-small">
+                                <lightning-combobox
+                                                name="state"
+                                                label="State Wise"
+                                                value=""
+                                                placeholder="Select State"
+                                                options={states}
+                                                onchange={handleChange}
+                                                required>
+                                </lightning-combobox>
+                                <div style="height:600px;">
+                                    <template if:true={nationalData}>
+                                        <lightning-datatable
+                                            key-field="id"
+                                            data={stateData}
+                                            columns={districtTableColumns}>
+                                        </lightning-datatable>
+                                    </template>
+                                </div>
+                                
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </template>
+                </div>
+            </lightning-tab>
+            <lightning-tab label="Report Fake News">
+                <lightning-record-form
+                            object-api-name={reviewObject}
+                            fields={myField}
+                            onsubmit={handleSubmit}>
+                    </lightning-record-form>
+            </lightning-tab>
+        </lightning-tabset>
+        
+    </lightning-card>
+    <h6>*Source:  <a href="https://www.covid19india.org">https://www.covid19india.org/</a></h6>
+</template>
